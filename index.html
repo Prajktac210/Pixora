@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easyEdit</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="header-container">
+            <span>easyedit <i class="ri-image-edit-fill"></i>
+            </span>
+
+            <button class="btn-main">Export</button>
+        </div>
+
+        <div class="display-container">
+
+             <div class="left-img-container">
+
+                  <div class="image-uploader" id="image-uploader">
+                        <label for="main-img"> upload Image <i class="ri-upload-line"></i></label>
+                        <input type="file" accept="image/*" id="main-img">
+                  </div>
+
+                  <div id="img-container">
+                        <img src="#" id="img-main">
+                  </div>
+                  
+             </div>
+
+             <div class="right-filter-contaner">
+                  <div class="filter-container">
+
+                     <div></div>   
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>   
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+
+                  </div>
+             </div>
+        </div>
+
+        <div class="footer-container">
+             <div>
+                 save
+             </div>
+            
+            <div class="setting-container">
+                <div id="panner-setting-handeler"><i class="ri-brush-fill"></i></div>
+                <div><i class="ri-lightbulb-fill"></i></div>
+            </div>
+
+            <div class="setting-container">
+                <div>?</div>
+            </div>
+
+            
+        </div>
+
+        <div class="settings" id="settings">
+             <div class="setting-pannel" id="setting-pannel">
+
+                <div id="setting-heading"> Settings</div>
+                 
+               <form>
+                   <div>
+                       <label for="Brightness">Brightness: </label>
+                       <input type="range" id="Brightness" >
+                </div>
+
+                 <div>
+                       <label for="Contrast">Contrast: </label>
+                       <input type="range" id="Contrast">
+                 </div>
+
+                 <div>
+                       <label for="Saturation">Saturation: </label>
+                       <input type="range" id="Saturation">
+                
+                 </div>
+
+                 <div>
+                       <label for="Grayscale">Grayscale: </label>
+                       <input type="range" id="Grayscale">
+                 </div>
+
+                 <div>
+                       <label for="Invert">Invert: </label>
+                       <input type="range" id="Invert">
+                 </div>
+
+                 <div>
+                       <label for="Sepia">Sepia: </label>
+                       <input type="range" id="Sepia">
+                 </div>
+             
+                 <div>
+                       <label for="Blur">Blur: </label>
+                       <input type="range" id="Blur">
+                 </div>
+
+                 
+               </form>
+
+             </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
