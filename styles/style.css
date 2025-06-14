@@ -1,3 +1,4 @@
+/* Reset all default spacing and set default font and color */
 * {
     padding: 0;
     margin: 0;
@@ -5,15 +6,15 @@
     color: whitesmoke;
 }
 
-
+/* Set full viewport size and background */
 body,
 html {
     height: 100%;
     width: 100%;
-    background-color: #8380a1;
+    background-color: #5e5e5f;
 }
 
-
+/* Container for all page content */
 .main-container {
     height: 100vh;
     width: 100vw;
@@ -21,6 +22,7 @@ html {
     overflow: hidden;
 }
 
+/* Header section */
 .header-container {
     height: 7vh;
     width: 100vw;
@@ -30,11 +32,31 @@ html {
     font-size: 1.3em;
 }
 
+/* Header brand name */
 .header-container span {
     margin-left: 4vw;
     text-transform: uppercase;
 }
+#export-btn {
+    position: fixed;
+    top: 1.5vh;
+    right: 2vw;
+    background-color: #022446;
+    font-size: 0.9em;
+    border: 1px solid black;
+    cursor: pointer;
+    color: rgb(221, 233, 233);
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    z-index: 999; /* Keeps it above other elements */
+}
 
+#export-btn:hover {
+    background-color: #518ac4;
+}
+
+/* Button styling */
 .btn-main {
     background-color: #022446;
     font-size: 0.8em;
@@ -48,10 +70,12 @@ html {
     border-radius: 6px;
 }
 
+/* Button hover effect */
 .btn-main:hover {
     background-color: #518ac4;
 }
 
+/* Main image and filter display area */
 .display-container {
     height: 85vh;
     width: 100vw;
@@ -60,6 +84,7 @@ html {
     justify-content: space-between;
 }
 
+/* Left section for image upload/preview */
 .left-img-container {
     height: 100%;
     width: 70vw;
@@ -69,26 +94,35 @@ html {
     background-color: #2c2b2b;
 }
 
-
+/* Right section for filters */
 .right-filter-contaner {
     height: 100%;
     width: 30vw;
 }
 
+/* Footer section with settings and delete */
 .footer-container {
     height: 8vh;
     width: 86vw;
     display: flex;
     align-items: center;
+    gap: 2px;
     justify-content: space-between;
     padding: 0 4vw;
 }
 
+/* Footer images */
+.footer-container img {
+    width: 50px;
+}
+
+/* Grouping for setting icons */
 .setting-container {
     display: flex;
     gap: 14px;
 }
 
+/* Circular setting icons */
 .setting-container div {
     height: 40px;
     width: 40px;
@@ -100,17 +134,17 @@ html {
     cursor: pointer;
 }
 
-
+/* Icon color */
 .footer-container div i {
     color: #3a206b;
 }
 
-
-
+/* Hidden file input */
 #main-img {
     display: none;
 }
 
+/* File upload UI */
 .image-uploader {
     height: 30%;
     width: 70%;
@@ -122,6 +156,7 @@ html {
     border-radius: 24px;
 }
 
+/* Upload label text */
 .image-uploader label {
     font-size: 2em;
     letter-spacing: 4px;
@@ -129,11 +164,12 @@ html {
     color: gray;
 }
 
+/* Upload icon */
 .image-uploader label i {
     color: gray;
 }
 
-
+/* Filter grid layout */
 .filter-container {
     height: 100%;
     width: 100%;
@@ -143,27 +179,44 @@ html {
     flex-wrap: wrap;
     overflow-x: hidden;
     overflow-y: scroll;
+    gap: 10px; /* Add gap between filter items */
+    padding: 10px; /* Optional: spacing inside container */
 }
 
+/* Individual filter box */
 .filter-container div {
-    height: 150px;
-    width: 150px;
-    margin: 5px;
+    height: 180px;
+    width: 180px;
     background-color: #2c2b2b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
+/* Make filter images fill the container */
+.filter-container div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
+/* Image preview container */
 #img-container {
     display: none;
     height: 70%;
     width: 90%;
 }
 
+/* Uploaded image styling */
 #img-container img {
     height: 100%;
     width: 100%;
 }
 
+/* Fullscreen settings overlay */
 .settings {
     height: 100%;
     width: 100%;
@@ -174,6 +227,7 @@ html {
     cursor: pointer;
 }
 
+/* Settings panel box */
 .setting-pannel {
     height: 70vh;
     width: 350px;
@@ -183,29 +237,31 @@ html {
     backdrop-filter: blur(2px);
     border-radius: 14px;
     padding: 20px;
-
 }
 
-
-.setting-pannel div{
+/* Each input row in settings */
+.setting-pannel div {
     height: 50px;
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-.setting-pannel div label{
-    text-transform:capitalize;
+/* Labels inside settings */
+.setting-pannel div label {
+    text-transform: capitalize;
     color: #a8a6a6;
     font-size: 1.2em;
 }
 
-.setting-pannel div input{
+/* Range input width */
+.setting-pannel div input {
     width: 200px;
 }
 
-.setting-pannel #setting-heading{
+/* Settings heading */
+.setting-pannel #setting-heading {
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 800;
-}Add comment
+}

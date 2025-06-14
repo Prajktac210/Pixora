@@ -7,6 +7,7 @@
     <title>easyEdit</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/filters.css">
 </head>
 
 <body>
@@ -17,109 +18,152 @@
             <span>easyedit <i class="ri-image-edit-fill"></i>
             </span>
 
-            <button class="btn-main">Export</button>
+            <a  id="export-btn">export</a>
         </div>
 
         <div class="display-container">
 
-             <div class="left-img-container">
+            <div class="left-img-container">
 
-                  <div class="image-uploader" id="image-uploader">
-                        <label for="main-img"> upload Image <i class="ri-upload-line"></i></label>
-                        <input type="file" accept="image/*" id="main-img">
-                  </div>
+                <div class="image-uploader" id="image-uploader">
+                    <label for="main-img"> upload Image <i class="ri-upload-line"></i></label>
+                    <input type="file" accept="image/*" id="main-img">
+                </div>
 
-                  <div id="img-container">
-                        <img src="#" id="img-main">
-                  </div>
-                  
-             </div>
+                <div id="img-container">
+                    <img src="#" id="img-main">
+                </div>
 
-             <div class="right-filter-contaner">
-                  <div class="filter-container">
+            </div>
 
-                     <div></div>   
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>   
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
+            <div class="right-filter-contaner">
+                <div class="filter-container">
 
-                  </div>
-             </div>
+                    <div class="filters pastel" >
+                        <img src="./images/filters.jpeg">
+                    </div>
+
+                    <div class="filters aqua">
+                        <img src="./images/filters.jpeg">
+                    </div>
+
+                    <div class="filters twilight">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters ghostly">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters warm">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters cool">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters blackwhite">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters dark">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters dreamy">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters cinematic">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters vintage">
+                        <img src="./images/filters.jpeg">
+                    </div>
+                    <div class="filters vibrant">
+                        <img src="./images/filters.jpeg">
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div class="footer-container">
-             <div>
-                 save
-             </div>
-            
+            <div id="delete">
+                delete
+            </div>
+
             <div class="setting-container">
                 <div id="panner-setting-handeler"><i class="ri-brush-fill"></i></div>
-                <div><i class="ri-lightbulb-fill"></i></div>
+                <div id="random-img-header"><i class="ri-lightbulb-fill"></i></div>
             </div>
 
             <div class="setting-container">
                 <div>?</div>
             </div>
 
-            
+
         </div>
 
         <div class="settings" id="settings">
-             <div class="setting-pannel" id="setting-pannel">
+            <div class="setting-pannel" id="setting-pannel">
 
                 <div id="setting-heading"> Settings</div>
-                 
-               <form>
-                   <div>
-                       <label for="Brightness">Brightness: </label>
-                       <input type="range" id="Brightness" >
-                </div>
 
-                 <div>
-                       <label for="Contrast">Contrast: </label>
-                       <input type="range" id="Contrast">
-                 </div>
+                <form>
+                    <div>
+                        <label for="Brightness">Brightness: </label>
+                        <input type="range" id="Brightness">
+                    </div>
 
-                 <div>
-                       <label for="Saturation">Saturation: </label>
-                       <input type="range" id="Saturation">
-                
-                 </div>
+                    <div>
+                        <label for="Contrast">Contrast: </label>
+                        <input type="range" id="Contrast">
+                    </div>
 
-                 <div>
-                       <label for="Grayscale">Grayscale: </label>
-                       <input type="range" id="Grayscale">
-                 </div>
+                    <div>
+                        <label for="Saturation">Saturation: </label>
+                        <input type="range" id="Saturation">
 
-                 <div>
-                       <label for="Invert">Invert: </label>
-                       <input type="range" id="Invert">
-                 </div>
+                    </div>
 
-                 <div>
-                       <label for="Sepia">Sepia: </label>
-                       <input type="range" id="Sepia">
-                 </div>
-             
-                 <div>
-                       <label for="Blur">Blur: </label>
-                       <input type="range" id="Blur">
-                 </div>
+                    <div>
+                        <label for="Grayscale">Grayscale: </label>
+                        <input type="range" id="Grayscale">
+                    </div>
 
-                 
-               </form>
+                    <div>
+                        <label for="Invert">Invert: </label>
+                        <input type="range" id="Invert">
+                    </div>
 
-             </div>
+                    <div>
+                        <label for="Sepia">Sepia: </label>
+                        <input type="range" id="Sepia">
+                    </div>
+
+                    <div>
+                        <label for="Blur">Blur: </label>
+                        <input type="range" id="Blur">
+                    </div>
+
+                </form>
+
+            </div>
         </div>
 
+
+        <div id="random-img-container">
+             
+        </div>
+
+
+        <div id="loader">
+            <div class="loader-img-container">
+                <img src="./images/loader.jpeg">
+                <div class="overlay"></div>
+            </div>
+
+          
+        </div>
+
+        <div id="notificationBar">
+             <h3 id="notificationText">hello,welcome to easyEdit website</h3>
+        </div>
     </div>
 
 
