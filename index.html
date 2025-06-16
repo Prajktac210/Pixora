@@ -1,110 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>easyEdit</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/filters.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>easyEdit</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/filters.css" />
 </head>
 
 <body>
+  <div class="main-container">
+    <div class="header-container">
+      <span>easyEdit <i class="ri-image-edit-fill"></i></span>
+      <a id="export-btn">export</a>
+    </div>
 
-    <div class="main-container">
-
-        <div class="header-container">
-            <span>easyedit <i class="ri-image-edit-fill"></i>
-            </span>
-
-            <a  id="export-btn">export</a>
+    <div class="display-container">
+      <div class="left-img-container">
+        <div class="image-uploader" id="image-uploader">
+          <label for="main-img">Upload Image <i class="ri-upload-line"></i></label>
+          <input type="file" accept="image/*" id="main-img" />
         </div>
 
-        <div class="display-container">
-
-            <div class="left-img-container">
-
-                <div class="image-uploader" id="image-uploader">
-                    <label for="main-img"> upload Image <i class="ri-upload-line"></i></label>
-                    <input type="file" accept="image/*" id="main-img">
-                </div>
-
-                <div id="img-container">
-                    <img src="#" id="img-main">
-                </div>
-
-            </div>
-
-            <div class="right-filter-contaner">
-                <div class="filter-container">
-
-                    <div class="filters pastel" >
-                        <img src="./images/filters.jpeg">
-                    </div>
-
-                    <div class="filters aqua">
-                        <img src="./images/filters.jpeg">
-                    </div>
-
-                    <div class="filters twilight">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters ghostly">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters warm">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters cool">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters blackwhite">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters dark">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters dreamy">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters cinematic">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters vintage">
-                        <img src="./images/filters.jpeg">
-                    </div>
-                    <div class="filters vibrant">
-                        <img src="./images/filters.jpeg">
-                    </div>
-
-                </div>
-            </div>
+        <div id="img-container" style="display: none;">
+          <img src="#" id="img-main" style="display: none;" />
         </div>
+      </div>
 
-        <div class="footer-container">
-            <div id="delete">
-                delete
-            </div>
-
-            <div class="setting-container">
-                <div id="panner-setting-handeler"><i class="ri-brush-fill"></i></div>
-                <div id="random-img-header"><i class="ri-lightbulb-fill"></i></div>
-            </div>
-
-            <div class="setting-container">
-                <div>?</div>
-            </div>
-
-
+      <div class="right-filter-contaner">
+        <div class="filter-container">
+          <!-- Filter Presets -->
+          <div class="filters pastel"><img src="./images/filters.jpeg"/></div>
+          <div class="filters aqua"><img src="./images/filters.jpeg"/></div>
+          <div class="filters twilight"><img src="./images/filters.jpeg"/></div>
+          <div class="filters ghostly"><img src="./images/filters.jpeg"/></div>
+          <div class="filters warm"><img src="./images/filters.jpeg"/></div>
+          <div class="filters cool"><img src="./images/filters.jpeg"/></div>
+          <div class="filters blackwhite"><img src="./images/filters.jpeg"/></div>
+          <div class="filters dark"><img src="./images/filters.jpeg"/></div>
+          <div class="filters dreamy"><img src="./images/filters.jpeg"/></div>
+          <div class="filters cinematic"><img src="./images/filters.jpeg"/></div>
+          <div class="filters vintage"><img src="./images/filters.jpeg"/></div>
+          <div class="filters vibrant"><img src="./images/filters.jpeg"/></div>
         </div>
+      </div>
+    </div>
 
-        <div class="settings" id="settings">
-            <div class="setting-pannel" id="setting-pannel">
+    <div class="footer-container">
+      <div id="delete">Delete</div>
+      <div class="setting-container">
+        <div id="panner-setting-handeler"><i class="ri-brush-fill"></i></div>
+        <div id="random-img-header"><i class="ri-lightbulb-fill"></i></div>
+      </div>
+    </div>
 
-                <div id="setting-heading"> Settings</div>
-
-                <form>
+    <div class="settings" id="settings">
+      <div class="setting-pannel" id="setting-pannel">
+        <div id="setting-heading">Settings</div>
+        <form>
                     <div>
                         <label for="Brightness">Brightness: </label>
                         <input type="range" id="Brightness">
@@ -142,33 +96,25 @@
                     </div>
 
                 </form>
-
-            </div>
-        </div>
-
-
-        <div id="random-img-container">
-             
-        </div>
-
-
-        <div id="loader">
-            <div class="loader-img-container">
-                <img src="./images/loader.jpeg">
-                <div class="overlay"></div>
-            </div>
-
-          
-        </div>
-
-        <div id="notificationBar">
-             <h3 id="notificationText">hello,welcome to easyEdit website</h3>
-        </div>
+      </div>
     </div>
 
+    <div id="random-img-container"></div>
 
+    <div id="loader">
+      <div class="loader-img-container">
+        <img src="./images/bgimg.jpeg" />
+        <div class="overlay"></div>
+      </div>
+      <div class="loader-text-container">
+        <div class="main-loader"><div class="loder"></div></div>
+        <h3>Loading...</h3>
+      </div>
+    </div>
 
-    <script src="./scripts/script.js"></script>
+    <div id="notificationBar"><h3 id="notificationText">Hello, welcome</h3></div>
+  </div>
+
+  <script src="./scripts/script.js"></script>
 </body>
-
 </html>
