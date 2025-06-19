@@ -277,6 +277,8 @@ html {
   width: 100%;
 }
 
+
+
 .loader-text-container{
     position:absolute;
     top: 70%;
@@ -381,3 +383,115 @@ html {
     width: 100%;
     object-fit:fill;
 }
+
+
+/* Tablet Devices (768px - 1024px) */
+@media (max-width: 1024px) {
+    .display-container {
+        flex-direction: column;
+    }
+
+    .left-img-container,
+    .right-filter-contaner {
+        width: 100vw;
+        height: 50%;
+    }
+
+    .setting-pannel {
+        width: 80vw;
+        transform: translate(10vw, 10vh);
+    }
+
+    .image-uploader {
+        width: 90%;
+    }
+
+    .footer-container {
+        width: 100vw;
+        padding: 0 2vw;
+        flex-wrap: wrap;
+    }
+
+    .btn-main {
+        width: 120px;
+        font-size: 0.7em;
+    }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        font-size: 1em;
+    }
+
+    .header-container span {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .btn-main {
+        margin: 10px 0;
+        width: 100px;
+        height: 28px;
+        font-size: 0.75em;
+    }
+
+    .display-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-img-container,
+    .right-filter-contaner {
+        width: 100vw;
+        height: auto;
+    }
+
+    .filter-container div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .setting-container {
+        justify-content: center;
+    }
+
+    .setting-pannel {
+        width: 90vw;
+        transform: translate(5vw, 5vh);
+    }
+
+    .setting-pannel div input {
+        width: 100px;
+    }
+
+    .image-uploader {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .image-uploader label {
+        font-size: 1.5em;
+    }
+
+    .main-loader {
+        width: 80%;
+    }
+
+    #notificationBar {
+        width: 90%;
+        left: 5%;
+        bottom: 5%;
+    }
+}
+
